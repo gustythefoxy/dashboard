@@ -33,6 +33,7 @@
     --clr-white: #202528;
     --clr-light: rgba(0, 0, 0, 0.4);
     --clr-dark: #edeffd;
+    --clr-info-dark: #edeffd;
     --clr-dark-variant: #677483;
     --box-shadow: 0 2rem 3rem var(--clr-light)
 }
@@ -391,6 +392,9 @@ main .recent_order a{
 
   /*start right side styel*/
 
+
+
+
 .right{
     margin-top: 1.4rem;
 }
@@ -438,6 +442,10 @@ main .recent_order a{
     text-align: center;
 }
 
+.right .right_text{
+    position: relative;
+    margin-right: auto;
+}
 .right .info h3{
     color: var(--clr-dark);
 }

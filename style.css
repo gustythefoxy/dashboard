@@ -141,7 +141,9 @@ aside .logo{
 }
 
 
-
+aside .top div.close span{
+    display: none;
+}
 
 /*******************sidebar
 ****************/
@@ -552,6 +554,10 @@ main .recent_order a{
         grid-template-columns: repeat(1,1fr);
     }
 
+    .right .top button{
+        display:contents;
+    }
+
     aside{
         position: fixed;
         width: 18rem;
@@ -562,11 +568,18 @@ main .recent_order a{
         animation: menuAni 1s forwards;
     }
 
+    .aside_close{
+        animation: menuAni 1s backwards;
+        right: -100px;
+        
+    }
+
     @keyframes menuAni {
         to{
-            left: 0;
+            left:0;
         }
     }
+
 
 
 
@@ -580,6 +593,7 @@ main .recent_order a{
         width: 100%;
         height: 3.4rem;
     }
+
 
     aside .top div.close span{
         display: inline;
@@ -611,6 +625,11 @@ main .recent_order a{
         padding: 40px;
     }
 
+    main .date{
+        position:absolute; left:180px;
+  
+    }
+
     main .recent_order{
         padding: 30px;
         margin: 0 auto;
@@ -634,10 +653,10 @@ main .recent_order a{
 
 
     .right .top button{
-        display: inline-block;
+        display: block;
         background: transparent;
+        color: var(--clr-dark);
         cursor: pointer;
-        color: var(--clr-white);
         position: absolute;
         left: 1rem;
     }

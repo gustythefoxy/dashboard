@@ -224,6 +224,10 @@ main {
     width: auto;
 }
 
+main .padder {
+    margin-top: 2rem;
+}
+
 main input{
     background-color: transparent;
     border: 0;
@@ -241,8 +245,16 @@ main .date{
 
 main .insights{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     gap: 1.6rem;
+}
+main .bigbox{
+    display: grid;
+    
+}
+
+
+main .insights{
+    grid-template-columns: repeat(3,1fr);
 }
 
 main .insights>div{
@@ -254,11 +266,30 @@ main .insights>div{
     transition: all .3s ease;
 }
 
-main .insights > div:hover{
+main .bigbox>div{
+    background-color: var(--clr-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 0.5rem;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+}
+
+main .insights> div:hover{
+    box-shadow: none;
+}
+main .bigbox> div:hover{
     box-shadow: none;
 }
 
-main .insights >div span{
+main .insights>div span{
+    background: coral;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--clr-white);
+    font-size: 2rem;
+}
+main .bigbox>div span{
     background: coral;
     padding: 0.5rem;
     border-radius: 50%;
@@ -279,11 +310,29 @@ main .insights > div .middle{
     align-items: center;
     justify-content: space-between;
 }
+
+
+main .bigbox > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 main .insights > div .middle h1{
     font-size: 1.6rem;
 }
 
+
 main h1{
+    color: var(--clr-dark);
+}
+
+main .bigbox h1{
+    color: var(--clr-dark);
+}
+main .bigbox h2{
+    color: var(--clr-dark);
+}
+main .h2chat{
     color: var(--clr-dark);
 }
 
@@ -300,11 +349,38 @@ main .insights p{
 }
 
 
+main .h2chat {
+    width: flex;
+    border: 1px solid var(--border-radius-3);
+    padding: 5px;
+    margin-right: 2px;
+    margin-top: 10px;
+  }
+
+  main .bigbox .progress{
+    position: relative;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+    display: flex;
+}
+
 main .insights .progress{
     position: relative;
     height: 68px;
     width: 68px;
     border-radius: 50px;
+}
+
+main .insights .progressC{
+    position: relative;
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+}
+
+main .insights .progressC svg circle{
+    stroke: var(--clr-danger);
 }
 
 
@@ -315,9 +391,23 @@ main .insights svg{
     top: 0;
 }
 
+main .bigbox svg{
+    height: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+}
+
 main .insights svg circle{
     fill: none;
     stroke: var(--clr-primary);
+    transform: rotate(270,80,80);
+    stroke-width: 5;
+}
+
+main .bigbox svg circle{
+    fill: none;
+    stroke: var(--clr-success);
     transform: rotate(270,80,80);
     stroke-width: 5;
 }
@@ -334,6 +424,16 @@ main .insights .income svg circle{
     stroke: var(--clr-success);
 }
 
+main .bigbox .progress .number{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main .insights .progress .number{
     position: absolute;
     top: 5%;
@@ -344,6 +444,17 @@ main .insights .progress .number{
     justify-content: center;
     align-items: center;
 }
+main .insights .progressC .number{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 main .recent_order{
     margin-top: 2rem;

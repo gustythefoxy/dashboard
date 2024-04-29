@@ -153,7 +153,7 @@ aside .sidebar{
     background-color: var(--clr-white);
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: 88vh;
     position: relative;
     top: 1rem;
 }
